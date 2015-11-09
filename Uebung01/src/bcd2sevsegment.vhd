@@ -8,8 +8,7 @@ use work.prol16_pack.all;
 entity bcd2sevsegment is
   port (
     bcd_i	   		: in std_ulogic_vector(3 downto 0);
-    sev_segment_o 	: out std_ulogic_vector(6 downto 0);
-
+    sev_segment_o 	: out std_ulogic_vector(6 downto 0));
 end bcd2sevsegment;
 
 architecture rtl of bcd2sevsegment is

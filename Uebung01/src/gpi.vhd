@@ -7,10 +7,9 @@ port (
   clk_i : in std_ulogic;
   res_i : in std_ulogic;
   in_i : in std_ulogic_vector(9 downto 0); -- 10 switches
-  sel_i : in std_ulogic; -- needed?
   rd_i : in std_ulogic;
   data_o : out std_ulogic_vector(9 downto 0));
-end entity;
+end;
 
 architecture rtl of gpi is
   signal data : std_ulogic_vector(9 downto 0);

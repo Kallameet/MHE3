@@ -32,9 +32,9 @@ entity cpu is
     mem_addr_o : out std_ulogic_vector(data_vec_length_c - 1 downto 0);
     mem_data_o : out std_ulogic_vector(data_vec_length_c - 1 downto 0);
     mem_data_i : in  std_ulogic_vector(data_vec_length_c - 1 downto 0);
-    mem_ce_no  : out std_ulogic;        -- chip enable (low active)
-    mem_oe_no  : out std_ulogic;        -- output enable (low active)
-    mem_we_no  : out std_ulogic;        -- write enable (low active)
+    mem_ce_o  : out std_ulogic;        -- chip enable (high active)
+    mem_oe_o  : out std_ulogic;        -- output enable (high active)
+    mem_we_o  : out std_ulogic;        -- write enable (high active)
 
     illegal_inst_o : out std_ulogic;
     cpu_halt_o     : out std_ulogic);
@@ -105,8 +105,8 @@ begin  -- rtl
 
   clk_n <= not clk_i;
 
-  mem_ce_no <= mem_rd_stb nor mem_wr_stb;
-  mem_oe_no <= mem_rd_stb nand clk_n;
-  mem_we_no <= mem_wr_stb nand clk_n;
+  mem_ce_o <= mem_rd_stb or mem_wr_stb;
+  mem_oe_o <= mem_rd_stb;
+  mem_we_o <= mem_wr_stb;
 
 end rtl;
