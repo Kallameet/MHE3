@@ -8,7 +8,7 @@ vcom -87 ../src/prol16/alu.vhd
 vcom -87 ../src/prol16/cpu.vhd
 
 vcom -87 ../src/arbiter.vhd
-vcom -93 ../src/convertToBCD.vhd
+vcom -93 ../src/nop.vhd
 vcom -87 ../src/bcd2sevsegment.vhd
 vcom -87 ../src/gpo.vhd
 vcom -87 ../src/prol16/spikefilter.vhd

@@ -25,8 +25,6 @@ architecture rtl of top is
   signal illegal_inst : std_ulogic;
   signal cpu_halt     : std_ulogic;
   
-  signal sel          : std_ulogic;
-  
   signal sev_segment1 : std_ulogic_vector(3 downto 0);
   signal sev_segment2 : std_ulogic_vector(3 downto 0);
   signal sev_segment3 : std_ulogic_vector(3 downto 0);
@@ -79,7 +77,7 @@ begin
 	  clk_i  => clk_i,
 	  res_i  => res_i,
       data_i => mem_data_out,
-	  sel_i  => sel,
+	  sel_i  => sel_gpo,
 	  wr_i   => mem_we,
 	  
       sev_segment1_o => sev_segment1,

@@ -1,23 +1,15 @@
-EQU ReadAddress, 3000d
-EQU WriteAddress, 3100d
-EQU LoopMax, 10d
+EQU ReadAddress, 3000
+EQU WriteAddress, 3100
+EQU LoopMax, 10
 
-MACRO CheckLoopIndex	
-	DEC R0	
-	LOADI R7, end
-	JUMPZ R7
-	LOADI R7, loopStart
-	JUMP R7
-ENDM
-
-MACRO ShiftR2Left4
+MACRO ShiftLeft4
 	SHL R2
 	SHL R2
 	SHL R2
 	SHL R2
 ENDM
 
-MACRO ShiftR3Left8
+MACRO ShiftLeft8
 	SHL R3
 	SHL R3
 	SHL R3
@@ -28,7 +20,7 @@ MACRO ShiftR3Left8
 	SHL R3
 ENDM
 
-MACRO ShiftR4Left12
+MACRO ShiftLeft12
 	SHL R4
 	SHL R4
 	SHL R4
@@ -43,65 +35,69 @@ MACRO ShiftR4Left12
 	SHL R4
 ENDM
 
-MACRO ShiftR5Left6
+MACRO ShiftLeft6
 	SHL R5
 	SHL R5
 	SHL R5
 	SHL R5
 	SHL R5
 	SHL R5
-ENDM
-
-MACRO SetCarryFlag
-	LOADI R7, 0d
-	LOADI R6, 1d
-	COMP R7, R6 ; set carry
-ENDM
-
-MACRO CheckIfR6IsGreaterEquals5
-	LOADI R7, 5d
-	COMP R6, R7
-	
-	LOADI R7, noAdd
-	JUMPC R7
-
-	LOADI R7, 3d
-	Add R6, R7
-	
-noAdd:	
 ENDM
 
 start:
 	LOADI R0, LoopMax	; Loop index
-	LOADI R1, 0d		; 3 downto 0
-	LOADI R3, 0d		; 7 downto 4
-	LOADI R3, 0d		; 11 downto 8
-	LOADI R4, 0d		; 15 downto 12
+	LOADI R1, 0		; 3 downto 0
+	LOADI R2, 0		; 7 downto 4
+	LOADI R3, 0		; 11 downto 8
+	LOADI R4, 0		; 15 downto 12
 
 	LOADI R7, ReadAddress
 	LOAD R5, R7
 		
-	ShiftR5Left6
+	ShiftLeft6
 		
 loopStart:
+	; add 3 if column greater euqals 5
+	LOADI R7, 5
+	COMP R1, R7
 	
-	MOVE R6, R1
-	CheckIfR6IsGreaterEquals5
-	MOVE R1, R6
+	LOADI R7, noAdd1
+	JUMPC R7
+
+	LOADI R7, 3
+	Add R1, R7
+noAdd1:
 	
-	MOVE R6, R2
-	CheckIfR6IsGreaterEquals5
-	MOVE R2, R6
+	LOADI R7, 5
+	COMP R2, R7
 	
-	MOVE R6, R3
-	CheckIfR6IsGreaterEquals5
-	MOVE R3, R6
+	LOADI R7, noAdd2
+	JUMPC R7
+
+	LOADI R7, 3
+	Add R2, R7
+noAdd2:
+
+	LOADI R7, 5
+	COMP R3, R7
 	
-	MOVE R6, R4
-	CheckIfR6IsGreaterEquals5
-	MOVE R4, R6
+	LOADI R7, noAdd3
+	JUMPC R7
+
+	LOADI R7, 3
+	Add R3, R7
+noAdd3:
+
+	LOADI R7, 5
+	COMP R4, R7
 	
-	
+	LOADI R7, noAdd4
+	JUMPC R7
+
+	LOADI R7, 3
+	Add R4, R7
+noAdd4:	
+	; shift
 	SHL R5
 	
 	SHLC R1
@@ -127,12 +123,17 @@ loopStart:
 	AND R3, R7
 	AND R4, R7
 	
-	CheckLoopIndex
+	; check index
+	DEC R0	
+	LOADI R7, end
+	JUMPZ R7
+	LOADI R7, loopStart
+	JUMP R7
 	
 end:
-	ShiftR2Left4
-	ShiftR3Left8
-	ShiftR4Left12
+	ShiftLeft4
+	ShiftLeft8
+	ShiftLeft12
 	
 	ADD R1, R2
 	ADD R1, R3
@@ -140,4 +141,6 @@ end:
 	
 	LOADI R7, WriteAddress
 	STORE R1, R7
-	
+
+	LOADI R7, start
+	JUMP R7

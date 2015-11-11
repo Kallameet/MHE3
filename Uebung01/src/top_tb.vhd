@@ -32,7 +32,7 @@ begin
   stimuli : process is
   begin
 	switches <= "0000000000" after clock_period_c,
-	            "0000000001" after clock_period_c * 10,
+	            "0010100010" after clock_period_c * 10,
 	            "1111111111" after clock_period_c * 20;
 	wait;
   end process;
