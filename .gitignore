@@ -9,3 +9,6 @@ work
 transcript
 *.hex
 *.wlf
+*.vhd.bak
+db
+incremental_db

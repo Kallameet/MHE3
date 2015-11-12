@@ -28,6 +28,6 @@ begin
       level_on_pin_o     => data(i));
   end generate;
 
-  data_o <= data when (rd_i = '1');
+  data_o <= data when (rd_i = '1') else (others => '0');
 
 end architecture;

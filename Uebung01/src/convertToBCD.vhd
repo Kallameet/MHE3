@@ -5,7 +5,7 @@ use ieee.numeric_std.all;
 
 entity Ram is
   generic (
-    gAddrWidth : integer := 14);
+    gAddrWidth : integer := 12);
   port (
     iClk  : in  std_ulogic;
     iData : in  std_ulogic_vector(15 downto 0);

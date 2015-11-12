@@ -1,0 +1,829 @@
+Analysis & Synthesis report for top
+Thu Nov 12 20:29:38 2015
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. General Register Statistics
+ 10. Inverted Register Statistics
+ 11. Registers Packed Into Inferred Megafunctions
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Source assignments for top:dut|Ram:RAM|altsyncram:mem_rtl_0|altsyncram_amh1:auto_generated
+ 14. Source assignments for top:dut|Ram:RAM|altsyncram:mem_rtl_0|altsyncram_amh1:auto_generated|altsyncram_c9l1:altsyncram1
+ 15. Parameter Settings for User Entity Instance: top:dut|cpu:CPU|datapath:datapath_inst|alu:thealu
+ 16. Parameter Settings for User Entity Instance: top:dut|cpu:CPU|datapath:datapath_inst|reg_file:thereg_file
+ 17. Parameter Settings for User Entity Instance: top:dut|Ram:RAM
+ 18. Parameter Settings for User Entity Instance: top:dut|gpi:GPI|spikefilter:\spikefilters:9:spikefilter
+ 19. Parameter Settings for User Entity Instance: top:dut|gpi:GPI|spikefilter:\spikefilters:8:spikefilter
+ 20. Parameter Settings for User Entity Instance: top:dut|gpi:GPI|spikefilter:\spikefilters:7:spikefilter
+ 21. Parameter Settings for User Entity Instance: top:dut|gpi:GPI|spikefilter:\spikefilters:6:spikefilter
+ 22. Parameter Settings for User Entity Instance: top:dut|gpi:GPI|spikefilter:\spikefilters:5:spikefilter
+ 23. Parameter Settings for User Entity Instance: top:dut|gpi:GPI|spikefilter:\spikefilters:4:spikefilter
+ 24. Parameter Settings for User Entity Instance: top:dut|gpi:GPI|spikefilter:\spikefilters:3:spikefilter
+ 25. Parameter Settings for User Entity Instance: top:dut|gpi:GPI|spikefilter:\spikefilters:2:spikefilter
+ 26. Parameter Settings for User Entity Instance: top:dut|gpi:GPI|spikefilter:\spikefilters:1:spikefilter
+ 27. Parameter Settings for User Entity Instance: top:dut|gpi:GPI|spikefilter:\spikefilters:0:spikefilter
+ 28. Parameter Settings for Inferred Entity Instance: top:dut|Ram:RAM|altsyncram:mem_rtl_0
+ 29. altsyncram Parameter Settings by Entity Instance
+ 30. Port Connectivity Checks: "top:dut|gpi:GPI|spikefilter:\spikefilters:0:spikefilter"
+ 31. Port Connectivity Checks: "top:dut|gpi:GPI|spikefilter:\spikefilters:1:spikefilter"
+ 32. Port Connectivity Checks: "top:dut|gpi:GPI|spikefilter:\spikefilters:2:spikefilter"
+ 33. Port Connectivity Checks: "top:dut|gpi:GPI|spikefilter:\spikefilters:3:spikefilter"
+ 34. Port Connectivity Checks: "top:dut|gpi:GPI|spikefilter:\spikefilters:4:spikefilter"
+ 35. Port Connectivity Checks: "top:dut|gpi:GPI|spikefilter:\spikefilters:5:spikefilter"
+ 36. Port Connectivity Checks: "top:dut|gpi:GPI|spikefilter:\spikefilters:6:spikefilter"
+ 37. Port Connectivity Checks: "top:dut|gpi:GPI|spikefilter:\spikefilters:7:spikefilter"
+ 38. Port Connectivity Checks: "top:dut|gpi:GPI|spikefilter:\spikefilters:8:spikefilter"
+ 39. Port Connectivity Checks: "top:dut|gpi:GPI|spikefilter:\spikefilters:9:spikefilter"
+ 40. Port Connectivity Checks: "top:dut|cpu:CPU"
+ 41. Elapsed Time Per Partition
+ 42. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Thu Nov 12 20:29:38 2015           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; top                                             ;
+; Top-level Entity Name              ; top_tbd                                         ;
+; Family                             ; Cyclone II                                      ;
+; Total logic elements               ; 656                                             ;
+;     Total combinational functions  ; 472                                             ;
+;     Dedicated logic registers      ; 264                                             ;
+; Total registers                    ; 264                                             ;
+; Total pins                         ; 40                                              ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 65,536                                          ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP2C20F484C7       ;                    ;
+; Top-level entity name                                                      ; top_tbd            ; top                ;
+; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; Off                ; Off                ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                            ;
++----------------------------------+-----------------+-------------------------------------------------------+----------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                                             ; File Name with Absolute Path                                               ; Library ;
++----------------------------------+-----------------+-------------------------------------------------------+----------------------------------------------------------------------------+---------+
+; ../src/top_tbd.vhd               ; yes             ; User VHDL File                                        ; D:/_SVN/GitHub/MHE3/Uebung01/src/top_tbd.vhd                               ;         ;
+; ../src/prol16/spikefilter.vhd    ; yes             ; User VHDL File                                        ; D:/_SVN/GitHub/MHE3/Uebung01/src/prol16/spikefilter.vhd                    ;         ;
+; ../src/prol16/reg_file.vhd       ; yes             ; User VHDL File                                        ; D:/_SVN/GitHub/MHE3/Uebung01/src/prol16/reg_file.vhd                       ;         ;
+; ../src/prol16/prol16_pack.vhd    ; yes             ; User VHDL File                                        ; D:/_SVN/GitHub/MHE3/Uebung01/src/prol16/prol16_pack.vhd                    ;         ;
+; ../src/prol16/datapath.vhd       ; yes             ; User VHDL File                                        ; D:/_SVN/GitHub/MHE3/Uebung01/src/prol16/datapath.vhd                       ;         ;
+; ../src/prol16/cpu.vhd            ; yes             ; User VHDL File                                        ; D:/_SVN/GitHub/MHE3/Uebung01/src/prol16/cpu.vhd                            ;         ;
+; ../src/prol16/control.vhd        ; yes             ; User VHDL File                                        ; D:/_SVN/GitHub/MHE3/Uebung01/src/prol16/control.vhd                        ;         ;
+; ../src/prol16/alu.vhd            ; yes             ; User VHDL File                                        ; D:/_SVN/GitHub/MHE3/Uebung01/src/prol16/alu.vhd                            ;         ;
+; ../src/top.vhd                   ; yes             ; User VHDL File                                        ; D:/_SVN/GitHub/MHE3/Uebung01/src/top.vhd                                   ;         ;
+; ../src/gpo.vhd                   ; yes             ; User VHDL File                                        ; D:/_SVN/GitHub/MHE3/Uebung01/src/gpo.vhd                                   ;         ;
+; ../src/gpi.vhd                   ; yes             ; User VHDL File                                        ; D:/_SVN/GitHub/MHE3/Uebung01/src/gpi.vhd                                   ;         ;
+; ../src/convertToBCD.vhd          ; yes             ; User VHDL File                                        ; D:/_SVN/GitHub/MHE3/Uebung01/src/convertToBCD.vhd                          ;         ;
+; ../src/bcd2sevsegment.vhd        ; yes             ; User VHDL File                                        ; D:/_SVN/GitHub/MHE3/Uebung01/src/bcd2sevsegment.vhd                        ;         ;
+; ../src/arbiter.vhd               ; yes             ; User VHDL File                                        ; D:/_SVN/GitHub/MHE3/Uebung01/src/arbiter.vhd                               ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                                          ; d:/programme/quartus/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                                          ; d:/programme/quartus/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                                          ; d:/programme/quartus/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                                          ; d:/programme/quartus/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
+; aglobal130.inc                   ; yes             ; Megafunction                                          ; d:/programme/quartus/quartus/libraries/megafunctions/aglobal130.inc        ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                                          ; d:/programme/quartus/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
+; altrom.inc                       ; yes             ; Megafunction                                          ; d:/programme/quartus/quartus/libraries/megafunctions/altrom.inc            ;         ;
+; altram.inc                       ; yes             ; Megafunction                                          ; d:/programme/quartus/quartus/libraries/megafunctions/altram.inc            ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                                          ; d:/programme/quartus/quartus/libraries/megafunctions/altdpram.inc          ;         ;
+; db/altsyncram_amh1.tdf           ; yes             ; Auto-Generated Megafunction                           ; D:/_SVN/GitHub/MHE3/Uebung01/syn/db/altsyncram_amh1.tdf                    ;         ;
+; db/altsyncram_c9l1.tdf           ; yes             ; Auto-Generated Megafunction                           ; D:/_SVN/GitHub/MHE3/Uebung01/syn/db/altsyncram_c9l1.tdf                    ;         ;
+; db/top.ram0_ram_3ba50801.hdl.mif ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; D:/_SVN/GitHub/MHE3/Uebung01/syn/db/top.ram0_ram_3ba50801.hdl.mif          ;         ;
++----------------------------------+-----------------+-------------------------------------------------------+----------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimated Total logic elements              ; 656   ;
+;                                             ;       ;
+; Total combinational functions               ; 472   ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 342   ;
+;     -- 3 input functions                    ; 117   ;
+;     -- <=2 input functions                  ; 13    ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 455   ;
+;     -- arithmetic mode                      ; 17    ;
+;                                             ;       ;
+; Total registers                             ; 264   ;
+;     -- Dedicated logic registers            ; 264   ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 40    ;
+; Total memory bits                           ; 65536 ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
+; Maximum fan-out node                        ; clk_i ;
+; Maximum fan-out                             ; 280   ;
+; Total fan-out                               ; 2867  ;
+; Average fan-out                             ; 3.62  ;
++---------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                      ;
++----------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                         ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                      ; Library Name ;
++----------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------+--------------+
+; |top_tbd                                           ; 472 (0)           ; 264 (0)      ; 65536       ; 0            ; 0       ; 0         ; 40   ; 0            ; |top_tbd                                                                                                 ; work         ;
+;    |top:dut|                                       ; 472 (0)           ; 264 (0)      ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_tbd|top:dut                                                                                         ; work         ;
+;       |Ram:RAM|                                    ; 1 (1)             ; 0 (0)        ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_tbd|top:dut|Ram:RAM                                                                                 ; work         ;
+;          |altsyncram:mem_rtl_0|                    ; 0 (0)             ; 0 (0)        ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_tbd|top:dut|Ram:RAM|altsyncram:mem_rtl_0                                                            ; work         ;
+;             |altsyncram_amh1:auto_generated|       ; 0 (0)             ; 0 (0)        ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_tbd|top:dut|Ram:RAM|altsyncram:mem_rtl_0|altsyncram_amh1:auto_generated                             ; work         ;
+;                |altsyncram_c9l1:altsyncram1|       ; 0 (0)             ; 0 (0)        ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_tbd|top:dut|Ram:RAM|altsyncram:mem_rtl_0|altsyncram_amh1:auto_generated|altsyncram_c9l1:altsyncram1 ; work         ;
+;       |arbiter:Arbiter|                            ; 25 (25)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_tbd|top:dut|arbiter:Arbiter                                                                         ; work         ;
+;       |bcd2sevsegment:BCD2SEV1|                    ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_tbd|top:dut|bcd2sevsegment:BCD2SEV1                                                                 ; work         ;
+;       |bcd2sevsegment:BCD2SEV2|                    ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_tbd|top:dut|bcd2sevsegment:BCD2SEV2                                                                 ; work         ;
+;       |bcd2sevsegment:BCD2SEV3|                    ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_tbd|top:dut|bcd2sevsegment:BCD2SEV3                                                                 ; work         ;
+;       |bcd2sevsegment:BCD2SEV4|                    ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_tbd|top:dut|bcd2sevsegment:BCD2SEV4                                                                 ; work         ;
+;       |cpu:CPU|                                    ; 407 (0)           ; 198 (0)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_tbd|top:dut|cpu:CPU                                                                                 ; work         ;
+;          |control:control_inst|                    ; 45 (45)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_tbd|top:dut|cpu:CPU|control:control_inst                                                            ; work         ;
+;          |datapath:datapath_inst|                  ; 362 (78)          ; 190 (62)     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_tbd|top:dut|cpu:CPU|datapath:datapath_inst                                                          ; work         ;
+;             |alu:thealu|                           ; 129 (129)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_tbd|top:dut|cpu:CPU|datapath:datapath_inst|alu:thealu                                               ; work         ;
+;             |reg_file:thereg_file|                 ; 155 (155)         ; 128 (128)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_tbd|top:dut|cpu:CPU|datapath:datapath_inst|reg_file:thereg_file                                     ; work         ;
+;       |gpi:GPI|                                    ; 10 (0)            ; 50 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_tbd|top:dut|gpi:GPI                                                                                 ; work         ;
+;          |spikefilter:\spikefilters:0:spikefilter| ; 1 (1)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_tbd|top:dut|gpi:GPI|spikefilter:\spikefilters:0:spikefilter                                         ; work         ;
+;          |spikefilter:\spikefilters:1:spikefilter| ; 1 (1)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_tbd|top:dut|gpi:GPI|spikefilter:\spikefilters:1:spikefilter                                         ; work         ;
+;          |spikefilter:\spikefilters:2:spikefilter| ; 1 (1)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_tbd|top:dut|gpi:GPI|spikefilter:\spikefilters:2:spikefilter                                         ; work         ;
+;          |spikefilter:\spikefilters:3:spikefilter| ; 1 (1)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_tbd|top:dut|gpi:GPI|spikefilter:\spikefilters:3:spikefilter                                         ; work         ;
+;          |spikefilter:\spikefilters:4:spikefilter| ; 1 (1)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_tbd|top:dut|gpi:GPI|spikefilter:\spikefilters:4:spikefilter                                         ; work         ;
+;          |spikefilter:\spikefilters:5:spikefilter| ; 1 (1)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_tbd|top:dut|gpi:GPI|spikefilter:\spikefilters:5:spikefilter                                         ; work         ;
+;          |spikefilter:\spikefilters:6:spikefilter| ; 1 (1)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_tbd|top:dut|gpi:GPI|spikefilter:\spikefilters:6:spikefilter                                         ; work         ;
+;          |spikefilter:\spikefilters:7:spikefilter| ; 1 (1)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_tbd|top:dut|gpi:GPI|spikefilter:\spikefilters:7:spikefilter                                         ; work         ;
+;          |spikefilter:\spikefilters:8:spikefilter| ; 1 (1)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_tbd|top:dut|gpi:GPI|spikefilter:\spikefilters:8:spikefilter                                         ; work         ;
+;          |spikefilter:\spikefilters:9:spikefilter| ; 1 (1)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_tbd|top:dut|gpi:GPI|spikefilter:\spikefilters:9:spikefilter                                         ; work         ;
+;       |gpo:GPO|                                    ; 1 (1)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_tbd|top:dut|gpo:GPO                                                                                 ; work         ;
++----------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                                          ;
++------------------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+-------+----------------------------------+
+; Name                                                                                                       ; Type ; Mode           ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF                              ;
++------------------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+-------+----------------------------------+
+; top:dut|Ram:RAM|altsyncram:mem_rtl_0|altsyncram_amh1:auto_generated|altsyncram_c9l1:altsyncram1|ALTSYNCRAM ; AUTO ; True Dual Port ; 4096         ; 16           ; 4096         ; 16           ; 65536 ; db/top.ram0_Ram_3ba50801.hdl.mif ;
++------------------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+-------+----------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 264   ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 16    ;
+; Number of registers using Asynchronous Clear ; 104   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 176   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------------------------------------+
+; Inverted Register Statistics                                ;
++---------------------------------------------------+---------+
+; Inverted Register                                 ; Fan out ;
++---------------------------------------------------+---------+
+; top:dut|cpu:CPU|datapath:datapath_inst|RegAIdx[1] ; 57      ;
+; top:dut|cpu:CPU|datapath:datapath_inst|RegAIdx[0] ; 57      ;
+; top:dut|cpu:CPU|datapath:datapath_inst|RegAIdx[2] ; 25      ;
+; top:dut|cpu:CPU|datapath:datapath_inst|RegBIdx[1] ; 49      ;
+; top:dut|cpu:CPU|datapath:datapath_inst|RegBIdx[0] ; 49      ;
+; top:dut|cpu:CPU|datapath:datapath_inst|RegBIdx[2] ; 17      ;
+; top:dut|cpu:CPU|datapath:datapath_inst|RegBIdx[3] ; 1       ;
+; top:dut|cpu:CPU|datapath:datapath_inst|RegAIdx[3] ; 1       ;
+; Total number of inverted registers = 8            ;         ;
++---------------------------------------------------+---------+
+
+
++-----------------------------------------------------------------+
+; Registers Packed Into Inferred Megafunctions                    ;
++------------------------------+---------------------------+------+
+; Register Name                ; Megafunction              ; Type ;
++------------------------------+---------------------------+------+
+; top:dut|Ram:RAM|oData[0..15] ; top:dut|Ram:RAM|mem_rtl_0 ; RAM  ;
++------------------------------+---------------------------+------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------+
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |top_tbd|top:dut|cpu:CPU|control:control_inst|Mux35                  ;
+; 4:1                ; 17 bits   ; 34 LEs        ; 34 LEs               ; 0 LEs                  ; No         ; |top_tbd|top:dut|cpu:CPU|datapath:datapath_inst|alu:thealu|add_b[15] ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |top_tbd|top:dut|arbiter:Arbiter|cpu_data_o[13]                      ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 20 LEs               ; 10 LEs                 ; No         ; |top_tbd|top:dut|arbiter:Arbiter|cpu_data_o[0]                       ;
+; 10:1               ; 16 bits   ; 96 LEs        ; 96 LEs               ; 0 LEs                  ; No         ; |top_tbd|top:dut|cpu:CPU|datapath:datapath_inst|alu:thealu|Mux7      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------+
+; Source assignments for top:dut|Ram:RAM|altsyncram:mem_rtl_0|altsyncram_amh1:auto_generated ;
++---------------------------------+--------------------+------+------------------------------+
+; Assignment                      ; Value              ; From ; To                           ;
++---------------------------------+--------------------+------+------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                            ;
++---------------------------------+--------------------+------+------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for top:dut|Ram:RAM|altsyncram:mem_rtl_0|altsyncram_amh1:auto_generated|altsyncram_c9l1:altsyncram1 ;
++---------------------------------+--------------------+------+----------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                       ;
++---------------------------------+--------------------+------+----------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                        ;
++---------------------------------+--------------------+------+----------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: top:dut|cpu:CPU|datapath:datapath_inst|alu:thealu ;
++----------------+-------+-----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                  ;
++----------------+-------+-----------------------------------------------------------------------+
+; bit_width_g    ; 16    ; Signed Integer                                                        ;
++----------------+-------+-----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: top:dut|cpu:CPU|datapath:datapath_inst|reg_file:thereg_file ;
++----------------+-------+---------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                            ;
++----------------+-------+---------------------------------------------------------------------------------+
+; registers_g    ; 8     ; Signed Integer                                                                  ;
+; is_fpga_g      ; 0     ; Signed Integer                                                                  ;
++----------------+-------+---------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: top:dut|Ram:RAM ;
++----------------+-------+-------------------------------------+
+; Parameter Name ; Value ; Type                                ;
++----------------+-------+-------------------------------------+
+; gaddrwidth     ; 12    ; Signed Integer                      ;
++----------------+-------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: top:dut|gpi:GPI|spikefilter:\spikefilters:9:spikefilter ;
++----------------+-------+-----------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                        ;
++----------------+-------+-----------------------------------------------------------------------------+
+; no_sync_ffs_g  ; 3     ; Signed Integer                                                              ;
++----------------+-------+-----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: top:dut|gpi:GPI|spikefilter:\spikefilters:8:spikefilter ;
++----------------+-------+-----------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                        ;
++----------------+-------+-----------------------------------------------------------------------------+
+; no_sync_ffs_g  ; 3     ; Signed Integer                                                              ;
++----------------+-------+-----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: top:dut|gpi:GPI|spikefilter:\spikefilters:7:spikefilter ;
++----------------+-------+-----------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                        ;
++----------------+-------+-----------------------------------------------------------------------------+
+; no_sync_ffs_g  ; 3     ; Signed Integer                                                              ;
++----------------+-------+-----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: top:dut|gpi:GPI|spikefilter:\spikefilters:6:spikefilter ;
++----------------+-------+-----------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                        ;
++----------------+-------+-----------------------------------------------------------------------------+
+; no_sync_ffs_g  ; 3     ; Signed Integer                                                              ;
++----------------+-------+-----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: top:dut|gpi:GPI|spikefilter:\spikefilters:5:spikefilter ;
++----------------+-------+-----------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                        ;
++----------------+-------+-----------------------------------------------------------------------------+
+; no_sync_ffs_g  ; 3     ; Signed Integer                                                              ;
++----------------+-------+-----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: top:dut|gpi:GPI|spikefilter:\spikefilters:4:spikefilter ;
++----------------+-------+-----------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                        ;
++----------------+-------+-----------------------------------------------------------------------------+
+; no_sync_ffs_g  ; 3     ; Signed Integer                                                              ;
++----------------+-------+-----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: top:dut|gpi:GPI|spikefilter:\spikefilters:3:spikefilter ;
++----------------+-------+-----------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                        ;
++----------------+-------+-----------------------------------------------------------------------------+
+; no_sync_ffs_g  ; 3     ; Signed Integer                                                              ;
++----------------+-------+-----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: top:dut|gpi:GPI|spikefilter:\spikefilters:2:spikefilter ;
++----------------+-------+-----------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                        ;
++----------------+-------+-----------------------------------------------------------------------------+
+; no_sync_ffs_g  ; 3     ; Signed Integer                                                              ;
++----------------+-------+-----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: top:dut|gpi:GPI|spikefilter:\spikefilters:1:spikefilter ;
++----------------+-------+-----------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                        ;
++----------------+-------+-----------------------------------------------------------------------------+
+; no_sync_ffs_g  ; 3     ; Signed Integer                                                              ;
++----------------+-------+-----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: top:dut|gpi:GPI|spikefilter:\spikefilters:0:spikefilter ;
++----------------+-------+-----------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                        ;
++----------------+-------+-----------------------------------------------------------------------------+
+; no_sync_ffs_g  ; 3     ; Signed Integer                                                              ;
++----------------+-------+-----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: top:dut|Ram:RAM|altsyncram:mem_rtl_0  ;
++------------------------------------+----------------------------------+----------------+
+; Parameter Name                     ; Value                            ; Type           ;
++------------------------------------+----------------------------------+----------------+
+; BYTE_SIZE_BLOCK                    ; 8                                ; Untyped        ;
+; AUTO_CARRY_CHAINS                  ; ON                               ; AUTO_CARRY     ;
+; IGNORE_CARRY_BUFFERS               ; OFF                              ; IGNORE_CARRY   ;
+; AUTO_CASCADE_CHAINS                ; ON                               ; AUTO_CASCADE   ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                              ; IGNORE_CASCADE ;
+; WIDTH_BYTEENA                      ; 1                                ; Untyped        ;
+; OPERATION_MODE                     ; DUAL_PORT                        ; Untyped        ;
+; WIDTH_A                            ; 16                               ; Untyped        ;
+; WIDTHAD_A                          ; 12                               ; Untyped        ;
+; NUMWORDS_A                         ; 4096                             ; Untyped        ;
+; OUTDATA_REG_A                      ; UNREGISTERED                     ; Untyped        ;
+; ADDRESS_ACLR_A                     ; NONE                             ; Untyped        ;
+; OUTDATA_ACLR_A                     ; NONE                             ; Untyped        ;
+; WRCONTROL_ACLR_A                   ; NONE                             ; Untyped        ;
+; INDATA_ACLR_A                      ; NONE                             ; Untyped        ;
+; BYTEENA_ACLR_A                     ; NONE                             ; Untyped        ;
+; WIDTH_B                            ; 16                               ; Untyped        ;
+; WIDTHAD_B                          ; 12                               ; Untyped        ;
+; NUMWORDS_B                         ; 4096                             ; Untyped        ;
+; INDATA_REG_B                       ; CLOCK1                           ; Untyped        ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1                           ; Untyped        ;
+; RDCONTROL_REG_B                    ; CLOCK1                           ; Untyped        ;
+; ADDRESS_REG_B                      ; CLOCK1                           ; Untyped        ;
+; OUTDATA_REG_B                      ; UNREGISTERED                     ; Untyped        ;
+; BYTEENA_REG_B                      ; CLOCK1                           ; Untyped        ;
+; INDATA_ACLR_B                      ; NONE                             ; Untyped        ;
+; WRCONTROL_ACLR_B                   ; NONE                             ; Untyped        ;
+; ADDRESS_ACLR_B                     ; NONE                             ; Untyped        ;
+; OUTDATA_ACLR_B                     ; NONE                             ; Untyped        ;
+; RDCONTROL_ACLR_B                   ; NONE                             ; Untyped        ;
+; BYTEENA_ACLR_B                     ; NONE                             ; Untyped        ;
+; WIDTH_BYTEENA_A                    ; 1                                ; Untyped        ;
+; WIDTH_BYTEENA_B                    ; 1                                ; Untyped        ;
+; RAM_BLOCK_TYPE                     ; AUTO                             ; Untyped        ;
+; BYTE_SIZE                          ; 8                                ; Untyped        ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                        ; Untyped        ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ             ; Untyped        ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ             ; Untyped        ;
+; INIT_FILE                          ; db/top.ram0_Ram_3ba50801.hdl.mif ; Untyped        ;
+; INIT_FILE_LAYOUT                   ; PORT_A                           ; Untyped        ;
+; MAXIMUM_DEPTH                      ; 0                                ; Untyped        ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL                           ; Untyped        ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL                           ; Untyped        ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL                           ; Untyped        ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL                           ; Untyped        ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN                  ; Untyped        ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN                  ; Untyped        ;
+; ENABLE_ECC                         ; FALSE                            ; Untyped        ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                            ; Untyped        ;
+; WIDTH_ECCSTATUS                    ; 3                                ; Untyped        ;
+; DEVICE_FAMILY                      ; Cyclone II                       ; Untyped        ;
+; CBXI_PARAMETER                     ; altsyncram_amh1                  ; Untyped        ;
++------------------------------------+----------------------------------+----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                 ;
++-------------------------------------------+--------------------------------------+
+; Name                                      ; Value                                ;
++-------------------------------------------+--------------------------------------+
+; Number of entity instances                ; 1                                    ;
+; Entity Instance                           ; top:dut|Ram:RAM|altsyncram:mem_rtl_0 ;
+;     -- OPERATION_MODE                     ; DUAL_PORT                            ;
+;     -- WIDTH_A                            ; 16                                   ;
+;     -- NUMWORDS_A                         ; 4096                                 ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                         ;
+;     -- WIDTH_B                            ; 16                                   ;
+;     -- NUMWORDS_B                         ; 4096                                 ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                               ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                         ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                 ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                            ;
++-------------------------------------------+--------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "top:dut|gpi:GPI|spikefilter:\spikefilters:0:spikefilter"                                          ;
++--------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port               ; Type   ; Severity ; Details                                                                             ;
++--------------------+--------+----------+-------------------------------------------------------------------------------------+
+; rise_edge_on_pin_o ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; fall_edge_on_pin_o ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "top:dut|gpi:GPI|spikefilter:\spikefilters:1:spikefilter"                                          ;
++--------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port               ; Type   ; Severity ; Details                                                                             ;
++--------------------+--------+----------+-------------------------------------------------------------------------------------+
+; rise_edge_on_pin_o ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; fall_edge_on_pin_o ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "top:dut|gpi:GPI|spikefilter:\spikefilters:2:spikefilter"                                          ;
++--------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port               ; Type   ; Severity ; Details                                                                             ;
++--------------------+--------+----------+-------------------------------------------------------------------------------------+
+; rise_edge_on_pin_o ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; fall_edge_on_pin_o ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "top:dut|gpi:GPI|spikefilter:\spikefilters:3:spikefilter"                                          ;
++--------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port               ; Type   ; Severity ; Details                                                                             ;
++--------------------+--------+----------+-------------------------------------------------------------------------------------+
+; rise_edge_on_pin_o ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; fall_edge_on_pin_o ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "top:dut|gpi:GPI|spikefilter:\spikefilters:4:spikefilter"                                          ;
++--------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port               ; Type   ; Severity ; Details                                                                             ;
++--------------------+--------+----------+-------------------------------------------------------------------------------------+
+; rise_edge_on_pin_o ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; fall_edge_on_pin_o ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "top:dut|gpi:GPI|spikefilter:\spikefilters:5:spikefilter"                                          ;
++--------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port               ; Type   ; Severity ; Details                                                                             ;
++--------------------+--------+----------+-------------------------------------------------------------------------------------+
+; rise_edge_on_pin_o ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; fall_edge_on_pin_o ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "top:dut|gpi:GPI|spikefilter:\spikefilters:6:spikefilter"                                          ;
++--------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port               ; Type   ; Severity ; Details                                                                             ;
++--------------------+--------+----------+-------------------------------------------------------------------------------------+
+; rise_edge_on_pin_o ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; fall_edge_on_pin_o ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "top:dut|gpi:GPI|spikefilter:\spikefilters:7:spikefilter"                                          ;
++--------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port               ; Type   ; Severity ; Details                                                                             ;
++--------------------+--------+----------+-------------------------------------------------------------------------------------+
+; rise_edge_on_pin_o ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; fall_edge_on_pin_o ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "top:dut|gpi:GPI|spikefilter:\spikefilters:8:spikefilter"                                          ;
++--------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port               ; Type   ; Severity ; Details                                                                             ;
++--------------------+--------+----------+-------------------------------------------------------------------------------------+
+; rise_edge_on_pin_o ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; fall_edge_on_pin_o ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "top:dut|gpi:GPI|spikefilter:\spikefilters:9:spikefilter"                                          ;
++--------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port               ; Type   ; Severity ; Details                                                                             ;
++--------------------+--------+----------+-------------------------------------------------------------------------------------+
+; rise_edge_on_pin_o ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; fall_edge_on_pin_o ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "top:dut|cpu:CPU"                                                                              ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port           ; Type   ; Severity ; Details                                                                             ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+; mem_ce_o       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; illegal_inst_o ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; cpu_halt_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Thu Nov 12 20:29:35 2015
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off top -c top
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 1 entities, in source file /_svn/github/mhe3/uebung01/src/top_tbd.vhd
+    Info (12022): Found design unit 1: top_tbd-rtl
+    Info (12023): Found entity 1: top_tbd
+Info (12021): Found 2 design units, including 1 entities, in source file /_svn/github/mhe3/uebung01/src/prol16/spikefilter.vhd
+    Info (12022): Found design unit 1: spikefilter-rtl
+    Info (12023): Found entity 1: spikefilter
+Info (12021): Found 2 design units, including 1 entities, in source file /_svn/github/mhe3/uebung01/src/prol16/reg_file.vhd
+    Info (12022): Found design unit 1: reg_file-rtl
+    Info (12023): Found entity 1: reg_file
+Info (12021): Found 1 design units, including 0 entities, in source file /_svn/github/mhe3/uebung01/src/prol16/prol16_pack.vhd
+    Info (12022): Found design unit 1: prol16_pack
+Info (12021): Found 2 design units, including 1 entities, in source file /_svn/github/mhe3/uebung01/src/prol16/datapath.vhd
+    Info (12022): Found design unit 1: datapath-rtl
+    Info (12023): Found entity 1: datapath
+Info (12021): Found 2 design units, including 1 entities, in source file /_svn/github/mhe3/uebung01/src/prol16/cpu.vhd
+    Info (12022): Found design unit 1: cpu-rtl
+    Info (12023): Found entity 1: cpu
+Info (12021): Found 2 design units, including 1 entities, in source file /_svn/github/mhe3/uebung01/src/prol16/control.vhd
+    Info (12022): Found design unit 1: control-Rtl
+    Info (12023): Found entity 1: control
+Info (12021): Found 2 design units, including 1 entities, in source file /_svn/github/mhe3/uebung01/src/prol16/alu.vhd
+    Info (12022): Found design unit 1: alu-rtl
+    Info (12023): Found entity 1: alu
+Info (12021): Found 2 design units, including 1 entities, in source file /_svn/github/mhe3/uebung01/src/top.vhd
+    Info (12022): Found design unit 1: top-rtl
+    Info (12023): Found entity 1: top
+Info (12021): Found 2 design units, including 1 entities, in source file /_svn/github/mhe3/uebung01/src/gpo.vhd
+    Info (12022): Found design unit 1: gpo-rtl
+    Info (12023): Found entity 1: gpo
+Info (12021): Found 2 design units, including 1 entities, in source file /_svn/github/mhe3/uebung01/src/gpi.vhd
+    Info (12022): Found design unit 1: gpi-rtl
+    Info (12023): Found entity 1: gpi
+Info (12021): Found 2 design units, including 1 entities, in source file /_svn/github/mhe3/uebung01/src/converttobcd.vhd
+    Info (12022): Found design unit 1: Ram-Rtl
+    Info (12023): Found entity 1: Ram
+Info (12021): Found 2 design units, including 1 entities, in source file /_svn/github/mhe3/uebung01/src/bcd2sevsegment.vhd
+    Info (12022): Found design unit 1: bcd2sevsegment-rtl
+    Info (12023): Found entity 1: bcd2sevsegment
+Info (12021): Found 2 design units, including 1 entities, in source file /_svn/github/mhe3/uebung01/src/arbiter.vhd
+    Info (12022): Found design unit 1: arbiter-rtl
+    Info (12023): Found entity 1: arbiter
+Info (12127): Elaborating entity "top_tbd" for the top level hierarchy
+Info (12128): Elaborating entity "top" for hierarchy "top:dut"
+Warning (10036): Verilog HDL or VHDL warning at top.vhd(22): object "mem_ce" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at top.vhd(25): object "illegal_inst" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at top.vhd(26): object "cpu_halt" assigned a value but never read
+Info (12128): Elaborating entity "cpu" for hierarchy "top:dut|cpu:CPU"
+Warning (10036): Verilog HDL or VHDL warning at cpu.vhd(61): object "clk_n" assigned a value but never read
+Info (12128): Elaborating entity "datapath" for hierarchy "top:dut|cpu:CPU|datapath:datapath_inst"
+Info (12128): Elaborating entity "alu" for hierarchy "top:dut|cpu:CPU|datapath:datapath_inst|alu:thealu"
+Info (12128): Elaborating entity "reg_file" for hierarchy "top:dut|cpu:CPU|datapath:datapath_inst|reg_file:thereg_file"
+Info (12128): Elaborating entity "control" for hierarchy "top:dut|cpu:CPU|control:control_inst"
+Info (12128): Elaborating entity "arbiter" for hierarchy "top:dut|arbiter:Arbiter"
+Info (12128): Elaborating entity "Ram" for hierarchy "top:dut|Ram:RAM"
+Info (12128): Elaborating entity "gpo" for hierarchy "top:dut|gpo:GPO"
+Info (12128): Elaborating entity "bcd2sevsegment" for hierarchy "top:dut|bcd2sevsegment:BCD2SEV1"
+Info (12128): Elaborating entity "gpi" for hierarchy "top:dut|gpi:GPI"
+Info (12128): Elaborating entity "spikefilter" for hierarchy "top:dut|gpi:GPI|spikefilter:\spikefilters:9:spikefilter"
+Warning (10325): VHDL Choice warning at spikefilter.vhd(55): ignored choice containing meta-value "'L'"
+Warning (10325): VHDL Choice warning at spikefilter.vhd(56): ignored choice containing meta-value "'H'"
+Warning (276027): Inferred dual-clock RAM node "top:dut|Ram:RAM|mem_rtl_0" from synchronous design logic.  The read-during-write behavior of a dual-clock RAM is undefined and may not match the behavior of the original design.
+Info (276014): Found 1 instances of uninferred RAM logic
+    Info (276004): RAM logic "top:dut|cpu:CPU|datapath:datapath_inst|reg_file:thereg_file|registers" is uninferred due to inappropriate RAM size
+Info (19000): Inferred 1 megafunctions from design logic
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "top:dut|Ram:RAM|mem_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 16
+        Info (286033): Parameter WIDTHAD_A set to 12
+        Info (286033): Parameter NUMWORDS_A set to 4096
+        Info (286033): Parameter WIDTH_B set to 16
+        Info (286033): Parameter WIDTHAD_B set to 12
+        Info (286033): Parameter NUMWORDS_B set to 4096
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK1
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+        Info (286033): Parameter INIT_FILE set to db/top.ram0_Ram_3ba50801.hdl.mif
+Info (12130): Elaborated megafunction instantiation "top:dut|Ram:RAM|altsyncram:mem_rtl_0"
+Info (12133): Instantiated megafunction "top:dut|Ram:RAM|altsyncram:mem_rtl_0" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
+    Info (12134): Parameter "WIDTH_A" = "16"
+    Info (12134): Parameter "WIDTHAD_A" = "12"
+    Info (12134): Parameter "NUMWORDS_A" = "4096"
+    Info (12134): Parameter "WIDTH_B" = "16"
+    Info (12134): Parameter "WIDTHAD_B" = "12"
+    Info (12134): Parameter "NUMWORDS_B" = "4096"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_B" = "NONE"
+    Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK1"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+    Info (12134): Parameter "INIT_FILE" = "db/top.ram0_Ram_3ba50801.hdl.mif"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_amh1.tdf
+    Info (12023): Found entity 1: altsyncram_amh1
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_c9l1.tdf
+    Info (12023): Found entity 1: altsyncram_c9l1
+Info (13000): Registers with preset signals will power-up high
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 744 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 12 input pins
+    Info (21059): Implemented 28 output pins
+    Info (21061): Implemented 688 logic cells
+    Info (21064): Implemented 16 RAM segments
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 8 warnings
+    Info: Peak virtual memory: 499 megabytes
+    Info: Processing ended: Thu Nov 12 20:29:38 2015
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:03
+
+
