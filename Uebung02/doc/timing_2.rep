@@ -1,0 +1,34 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : scan_test
+Version: B-2008.09-SP3
+Date   : Wed Nov 11 09:57:24 2015
+****************************************
+
+Operating Conditions: nom_pvt   Library: c35_CORELIB
+Wire Load Model Mode: enclosed
+
+  Startpoint: q_reg (rising edge-triggered flip-flop)
+  Endpoint: z_o (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  scan_test          10k                   c35_CORELIB
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  q_reg/C (DFC1)                           0.00       0.00 r
+  q_reg/Q (DFC1)                           0.62       0.62 f
+  z_o (out)                                0.00       0.62 f
+  data arrival time                                   0.62
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+1
