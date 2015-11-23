@@ -1,0 +1,18 @@
+1.1)
+a)
+n m p q
+1 0 0 0
+
+b)
+q = 0
+	p = !q
+	1 = !0
+
+b_i = 1
+	p = ((a_i xor b_i) and b_i) or !(a_i xor b_i)
+	
+	bei a_i = 0
+		((0 xor 1) and 1) or !(0 xor 1) = 1 or !0 = 1
+		
+	bei a_i = 1
+		((1 xor 1) and 1) or !(1 xor 1) = 0 or !0 = 1
