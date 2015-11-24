@@ -124,19 +124,20 @@ b_i = 1
 \section{DfT-Verletzungen}
 
 \subsection{No asynchronous design style}
-
+Keine asynchronen Elemente (Latch). Diese Latches könnten Daten speichern, was nicht erlaubt ist.
 \subsection{No on-chip generation of clock signals}
-
+Für die Flipflops in unserem Design sollte kein selbst erzeugter Takt (das heißt Ausgang eines Flipflops in unserem Design) verwendet werden, da es da beim Umschalten zum Mission Mode zu Fehlern kommen kann.
 \subsection{Special attention when more clock domains}
-
+Falls mehrere Clock Domains vorhanden sind muss man spezielle Maßnahmen ergreifen, damit die Scanketten richtig funktionieren. Man könnte zum Beispiel für jede Domain eine eigene Scankette machen.
 \subsection{No gating of clock signals}
-
+Clocksignale sollten nicht von anderen Signalen abhängig sein, da ansonsten beim Hineinschieben des Testpattern in die Scankette Probleme auftreten können.
 \subsection{No combinatorial feedback loops}
-
+In den kombinatorischen Teilen sollten keine Feedback Loops sein, da es sonst sein kann, dass dort Latches entstehen welche wiederrum Werte speichern können, was nicht erlaubt ist. Wenn die Werte aus der Kombinatorik ins Flipflop geladen werden, dann kann nicht bestimmt werden welchen Wert diese haben.
 \subsection{No one-shot delays}
-
+Wenn bei einem Gatter ein Signal an einem Eingang anliegt und bei einem zweiten Eingang das invertierte anliegt, sollte das vermieden werden und stattdessen der negative Q-Ausgang des vorhergehenden Flipsflops verwendet werden.
 \subsection{No on-chip generation of asynchronous control signals}
-
+Zum Beispiel die Reset Eingänge der Flipflops sollten nicht durch Kombinatorik in unserer Schaltung erzeugt werden, da dadurch Werte, die beim Schieben durch die Scankette laufen, Flipflops ungewollt resetten könnten.
 \subsection{Avoid tristate signals, check for bus contention}
+Busses sollten immer auf ein definiertes Potential gezogen werden, da sonst nicht vorhersehbar ist welche Werte sich einstellen, was das Testen unmöglich macht.
 
 \end{document}
