@@ -1,0 +1,30 @@
+Detected
+Diese Klasse inkludiert alle Faults die vom ATPG erkannt werden. Eine Subkategorie ist Detected by Simulation, hier 
+werden Testpatterns generiert und anschließend simuliert um sicherzustellen das mit diesem Testpattern Faults erkannt werden.
+Eine andere Subkategorie ist Detected by Implication. Faults dieser Art werden nicht von einem bestimmten Testpattern erkannt.
+Sie treten in der Scankette auf, zum Beispiel beim Scanketteneingang oder beim Takt der Scankette.
+
+Posdet (Mentor)/Possibly Detected (Synopsys)
+Diese Klasse ist in zwei Kategorien unterteilt. Die erste ist ATPG possibly detected. Hier sind alle Faults enthalten für die
+nicht bekannt ist ob sie am fehlerhaften Gerät den Wert 0 oder 1 annehmen. Mithilfe einer Analyse ist bewiesen das der Fault
+unter derzeitigen ATPG Bedingungen nicht 100% erkannt werden kann. Die Kategorie not analyzed-possibly detected besagt das selbe
+mit dem Unterschied das hier das Ergebniss der Analyse ob der Fault unter derzeitigen ATPG Bedingungen 100% erkannt werden kann
+inkonklusiv war.
+
+Untestable/Undetectable
+Faults in dieser Klasse können mit keinem Testpattern erkannt werden. Sie beinflussen allerdings auch das Verhalten des
+Systems nicht. Eine mögliche Art von Untestable Faults sind die Unused Faults, ein Fault dieser Art kann auftreten wenn 
+der Fault an einem offenen Ausgang auftritt. Im Vergleich dazu gibt es auch noch die Klasse Tied, Faults in dieser Klasse
+treten auf Pins auf die auf einen bestimmten Wert gesetzt sind. Es kann zum Beispiel ein stuck-at-0 Fault auf einem Pin
+der auf 0 hängt nicht erkannt werden. Andere mögliche Arten sind Blocked und Redundant Faults.
+
+ATPG Untestable
+Faults in dieser Klasse können mithilfe von ATPG nicht erkannt werden, aber sie können durch andere Methoden erkannt werden,
+zum Beispiel funktionale Tests. Eine Art von Faults in dieser Klasse sind Faults von sequentiellen Elementen die nicht in der
+Scankette sind, zum Beispiel Latches.
+
+Undetected/Not Detected
+Faults kommen in diese Klasse wenn die Analyse nicht abgeschlossen oder abgebrochen wurde. Ein möglicher Grund dafür,
+ist das erreichen des ATPG Iterationslimit. Die zwei Subkategorien dieser Klasse sind not controlled und not observed.
+Not controlled Faults treten auf wenn der ATPG Algorithmus keinen 1 oder 0 erzeugen kann und der Status immer auf X bleibt.
+Not observed Faults treten auf wenn die Faults nicht in die Scankette oder an einen Ausgang weitergeleitet werden können.
