@@ -1,0 +1,7 @@
+# Loading timing data from ../syn/netlist/cpu.sdf
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_tb File: ../src/cpu_tb.vhd
+run -all
+# 
+#  Assembling 0308 lines complete, code & data size 00579 words
+# Write Memory Dump File: from address 8000h size 00512 words
