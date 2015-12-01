@@ -1,0 +1,48 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : cpu
+Version: B-2008.09-SP3
+Date   : Wed Nov 25 08:48:01 2015
+****************************************
+
+Operating Conditions: nom_pvt   Library: c35_CORELIB
+Wire Load Model Mode: enclosed
+
+  Startpoint: control_inst/Cycle_reg_0_
+              (rising edge-triggered flip-flop)
+  Endpoint: mem_addr_o[15]
+            (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cpu                10k                   c35_CORELIB
+  control            10k                   c35_CORELIB
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  control_inst/Cycle_reg_0_/C (DFC3)                      0.00       0.00 r
+  control_inst/Cycle_reg_0_/Q (DFC3)                      0.70       0.70 f
+  control_inst/U78/Q (NOR30)                              1.00       1.70 r
+  control_inst/U77/Q (CLKIN0)                             0.87       2.57 f
+  control_inst/U76/Q (NOR20)                              0.52       3.09 r
+  control_inst/U63/Q (CLKIN0)                             0.67       3.76 f
+  control_inst/U5/Q (NOR22)                               1.03       4.79 r
+  control_inst/U62/Q (CLKIN0)                             0.56       5.35 f
+  control_inst/U6/Q (OAI222)                              0.91       6.26 r
+  control_inst/sel_addr_o (control)                       0.00       6.26 r
+  datapath_inst/sel_addr_i (datapath)                     0.00       6.26 r
+  datapath_inst/U20/Q (IMUX20)                            0.61       6.87 f
+  datapath_inst/mem_addr_o[15] (datapath)                 0.00       6.87 f
+  mem_addr_o[15] (out)                                    0.00       6.87 f
+  data arrival time                                                  6.87
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+1
