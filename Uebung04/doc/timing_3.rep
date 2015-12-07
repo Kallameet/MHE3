@@ -1,0 +1,50 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : cpu
+Version: B-2008.09-SP3
+Date   : Sun Dec  6 17:56:07 2015
+****************************************
+
+Operating Conditions: nom_pvt   Library: c35_CORELIB
+Wire Load Model Mode: enclosed
+
+  Startpoint: datapath_inst/RegOpcode_reg_3_
+              (rising edge-triggered flip-flop)
+  Endpoint: mem_addr_o[15]
+            (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cpu                10k                   c35_CORELIB
+  control_test_1     10k                   c35_CORELIB
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  datapath_inst/RegOpcode_reg_3_/C (DFSEC1)               0.00       0.00 r
+  datapath_inst/RegOpcode_reg_3_/Q (DFSEC1)               1.05       1.05 r
+  datapath_inst/op_code_o[3] (datapath_test_1)            0.00       1.05 r
+  control_inst/op_code_i[3] (control_test_1)              0.00       1.05 r
+  control_inst/U85/Q (CLKIN0)                             0.80       1.85 f
+  control_inst/U76/Q (NAND20)                             1.03       2.88 r
+  control_inst/U74/Q (NOR30)                              0.48       3.35 f
+  control_inst/U73/Q (CLKIN0)                             0.72       4.08 r
+  control_inst/U3/Q (NOR32)                               0.83       4.91 f
+  control_inst/U72/Q (CLKIN0)                             0.80       5.71 r
+  control_inst/U6/Q (OAI212)                              0.54       6.25 f
+  control_inst/sel_addr_o (control_test_1)                0.00       6.25 f
+  datapath_inst/sel_addr_i (datapath_test_1)              0.00       6.25 f
+  datapath_inst/U35/Q (IMUX20)                            0.44       6.70 f
+  datapath_inst/mem_addr_o[15] (datapath_test_1)          0.00       6.70 f
+  mem_addr_o[15] (out)                                    0.00       6.70 f
+  data arrival time                                                  6.70
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+1

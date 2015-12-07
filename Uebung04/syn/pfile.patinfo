@@ -1,0 +1,42 @@
+STIL 1.0 {
+   Design P2002.13;
+   CTL P2002.18;
+   TRC P2002.3;
+}
+Header {
+   Title "  TetraMAX (TM)  B-2008.09-SP3-i090115_213636 STIL output";
+   Date "Sun Dec  6 17:57:41 2015";
+   Source "Minimal STIL for design `cpu'";
+   History {
+      Ann {*  Sun Dec  6 17:56:03 2015  *}
+      Ann {*  DFT Compiler B-2008.09-SP3  *}
+   }         //end History
+}            //end Header
+PatternInformation {
+   Pattern "_pattern_" {
+      Purpose Scan;
+      FileReference "pfile.stil";
+      PatternCharacteristics {
+         BreakPoint No;
+         ConditionalStatements No;
+         CoreUsageReady No;
+         NonCyclized No;
+         DeltaChangeVectorData Yes;
+         GoTo No;
+         IddqTestPoints No;
+         Macro Yes;
+         MultiBitData No;
+         NumberPatternUnits 209;
+         PatternVariables No;
+         ProcedureCalls WithParameters;
+         Shift Yes;
+         STILPatterns Yes;
+      }      //end PatternCharacteristics
+      Fault {
+         Type StuckAt;
+         FaultCount 7394;
+         FaultsDetected 7368;
+         FaultCoverage 99;
+      }      //end Fault
+   }         //end Pattern
+}            //end PatternInformation
