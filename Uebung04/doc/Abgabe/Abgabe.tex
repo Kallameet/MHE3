@@ -85,9 +85,9 @@ Sie treten in der Scankette auf, zum Beispiel beim Scanketteneingang oder beim T
 
 \item Posdet\\ (Mentor)/Possibly Detected (Synopsys)
 Diese Klasse ist in zwei Kategorien unterteilt. Die erste ist ATPG possibly detected. Hier sind alle Faults enthalten für die
-nicht bekannt ist ob sie am fehlerhaften Gerät den Wert 0 oder 1 annehmen. Mithilfe einer Analyse ist bewiesen das der Fault
-unter derzeitigen ATPG Bedingungen nicht 100% erkannt werden kann. Die Kategorie not analyzed-possibly detected besagt das selbe
-mit dem Unterschied das hier das Ergebniss der Analyse ob der Fault unter derzeitigen ATPG Bedingungen 100% erkannt werden kann
+nicht bekannt ist ob sie am fehlerhaften Gerät den Wert 0 oder 1 annehmen. Mithilfe einer Analyse ist bewiesen, dass der Fault
+unter derzeitigen ATPG Bedingungen nicht zu 100\% erkannt werden kann. Die Kategorie not analyzed-possibly detected besagt das selbe
+mit dem Unterschied das hier das Ergebniss der Analyse ob der Fault unter derzeitigen ATPG Bedingungen zu 100\% erkannt werden kann
 inkonklusiv war.
 
 \item Untestable/Undetectable\\
@@ -112,10 +112,25 @@ Not observed Faults treten auf wenn die Faults nicht in die Scankette oder an ei
 
 \section{ATPG in der Praxis}
 
-Interpretieren Sie die Ergebnisse, die in die Datei atpg\_results.rep ausgegeben werden! Beschreiben Sie in diesem Zusammenhang auch die beiden Coverage-Werte (siehe [Syn08b, Kapitel 10]).
+%Interpretieren Sie die Ergebnisse, die in die Datei atpg\_results.rep ausgegeben werden! Beschreiben Sie in diesem Zusammenhang auch die beiden Coverage-Werte (siehe [Syn08b, Kapitel 10]).
+
+\subsection{Coverage}
+Beschreibung der Coverage-Werte laut TetraMAX® ATPG User Guide, Kapitel 10:
+\begin{itemize}
+
+\item Test Coverage\\
+Test coverage gives the most meaningful measure of test pattern quality and is the default
+coverage reported in the fault summary report. Test coverage is defined as the percentage
+of detected faults out of detectable faults.
+
+\item Fault Coverage\\
+Fault coverage is defined as the percentage of detected faults out of all faults.
+Fault coverage gives no credit for undetectable fault.
+
+\end{itemize}
 
 \section{Simulation der Testmuster}
 
-Erstellen und simulieren Sie nun zwei fehlerhafte Versionen der Netzliste: die erste Version soll einen Single-Stuck-At-Fehler enthalten, der in der Fehlerklasse Detected by Simulation liegt, die zweite einen nicht-detektierbaren Fehler. Dokumentieren Sie die Auswahl und die Vorgehensweise und interpretieren Sie die Ergebnisse.
+%Erstellen und simulieren Sie nun zwei fehlerhafte Versionen der Netzliste: die erste Version soll einen Single-Stuck-At-Fehler enthalten, der in der Fehlerklasse Detected by Simulation liegt, die zweite einen nicht-detektierbaren Fehler. Dokumentieren Sie die Auswahl und die Vorgehensweise und interpretieren Sie die Ergebnisse.
 
 \end{document}
