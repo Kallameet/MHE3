@@ -55,7 +55,7 @@ title=\lstname %zeigt titel der datei an
 
 %Beginn des Dokuments
 
-\newcommand{\Uebung}{ScanChainInsertion}
+\newcommand{\Uebung}{ATPG}
 \newcommand{\srcpath}{../../src}
 \newcommand{\simpath}{../../sim}
 \newcommand{\synpath}{../../syn}
@@ -112,7 +112,9 @@ Not observed Faults treten auf wenn die Faults nicht in die Scankette oder an ei
 
 \section{ATPG in der Praxis}
 
-%Interpretieren Sie die Ergebnisse, die in die Datei atpg\_results.rep ausgegeben werden! Beschreiben Sie in diesem Zusammenhang auch die beiden Coverage-Werte (siehe [Syn08b, Kapitel 10]).
+\subsection{Ergebnisse}
+Die Ergebnisse der Simulation werden in der Datei in die unterschiedlichen Fehlerklassen unterteilt. Die test coverage ist naturgemäß größer als die fault coverage. Der Unterschied zwischen den beiden Werten kommt durch die undetectable faults zustande.
+\lstinputlisting[language=c]{../atpg_results.rep}
 
 \subsection{Coverage}
 Beschreibung der Coverage-Werte laut TetraMAX® ATPG User Guide, Kapitel 10:
@@ -129,8 +131,42 @@ Fault coverage gives no credit for undetectable fault.
 
 \end{itemize}
 
+\newpage
 \section{Simulation der Testmuster}
 
-%Erstellen und simulieren Sie nun zwei fehlerhafte Versionen der Netzliste: die erste Version soll einen Single-Stuck-At-Fehler enthalten, der in der Fehlerklasse Detected by Simulation liegt, die zweite einen nicht-detektierbaren Fehler. Dokumentieren Sie die Auswahl und die Vorgehensweise und interpretieren Sie die Ergebnisse.
+\subsection{Detected by Simulation}
+Der Ausgang eines Nands in der ALU wird auf 0 gesetzt. Dieser Fehler führt zu vielen Fehlern in der Simulation.
+
+\begin{lstlisting}
+  //detectable error
+  assign n148 = 0;
+  NAND30 U211 ( .A(n152), .B(n150), .C(alu_func_i[3]), .Q() );
+\end{lstlisting}
+
+Ausgabe Simulation:
+\begin{verbatim}
+# DPV: End of STIL data; validation of 209 patterns FAILED 
+with 343 output mismatches
+\end{verbatim}
+
+\subsection{Nicht-detektierbarer Fehler}
+In der ALU der Prol16 ist ein Ausgangsport nicht verbunden. An diesen wird ein Stuck-At-1 Fehler angehängt. Dieser Fehler wird nicht erkannt in der Simulation.
+
+\begin{lstlisting}
+  alu_16_DW01_add_0 add_110 ( .A({n2, side_a_i, n1}), .B({n2, add_b, add_cin}), 
+        .CI(n2), .SUM({res_v_17, res_v_16, res_v_15, res_v_14, res_v_13, 
+        res_v_12, res_v_11, res_v_10, res_v_9, res_v_8, res_v_7, res_v_6, 
+        res_v_5, res_v_4, res_v_3, res_v_2, res_v_1, SYNOPSYS_UNCONNECTED__0})
+         );
+
+  // undetectable error
+  assign SYNOPSYS_UNCONNECTED__0 = 1;
+\end{lstlisting}
+
+Ausgabe Simulation:
+\begin{verbatim}
+# DPV: End of STIL data; validation of 209 patterns 
+completed successfully with no errors
+\end{verbatim}
 
 \end{document}
