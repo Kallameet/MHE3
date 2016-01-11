@@ -1,0 +1,15 @@
+#
+# .synopsys_dc.setup (TCL-Version)
+#
+
+# source global settings
+
+set MHE3_HOME [getenv MHE3_HOME]
+set synopsys_dc_setup_global $MHE3_HOME/etc/synopsys_dc.setup.tcl
+
+if { [file readable $synopsys_dc_setup_global] } {
+	echo "Sourcing global setup file"
+     	source $synopsys_dc_setup_global
+}
+
+# your individual settings here

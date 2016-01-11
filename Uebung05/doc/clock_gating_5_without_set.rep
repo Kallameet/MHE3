@@ -1,0 +1,258 @@
+ 
+****************************************
+Report : clock_gating
+        -gated
+        -ungated
+        -verbose
+Design : cpu
+Version: B-2008.09-SP3
+Date   : Wed Dec 16 09:25:25 2015
+****************************************
+
+
+--------------------------------------------------------------------------------
+                             Gated Register Report
+--------------------------------------------------------------------------------
+            Clock Gating Bank                    |         Gated Register 
+--------------------------------------------------------------------------------
+                                                 |
+ datapath_inst/clk_gate_RegPC_reg_13_            |       datapath_inst/RegPC_reg_15_
+                                                 |       datapath_inst/RegPC_reg_14_
+                                                 |       datapath_inst/RegPC_reg_13_
+                                                 |       datapath_inst/RegPC_reg_12_
+                                                 |       datapath_inst/RegPC_reg_11_
+                                                 |       datapath_inst/RegPC_reg_10_
+                                                 |       datapath_inst/RegPC_reg_9_
+                                                 |       datapath_inst/RegPC_reg_8_
+                                                 |       datapath_inst/RegPC_reg_7_
+                                                 |       datapath_inst/RegPC_reg_6_
+                                                 |       datapath_inst/RegPC_reg_5_
+                                                 |       datapath_inst/RegPC_reg_4_
+                                                 |       datapath_inst/RegPC_reg_3_
+                                                 |       datapath_inst/RegPC_reg_2_
+                                                 |       datapath_inst/RegPC_reg_1_
+                                                 |       datapath_inst/RegPC_reg_0_
+                                                 |
+ datapath_inst/thereg_file/clk_gate_registers_reg_7__0_
+                                                 |       datapath_inst/thereg_file/registers_reg_7__15_
+                                                 |       datapath_inst/thereg_file/registers_reg_7__14_
+                                                 |       datapath_inst/thereg_file/registers_reg_7__13_
+                                                 |       datapath_inst/thereg_file/registers_reg_7__12_
+                                                 |       datapath_inst/thereg_file/registers_reg_7__11_
+                                                 |       datapath_inst/thereg_file/registers_reg_7__10_
+                                                 |       datapath_inst/thereg_file/registers_reg_7__9_
+                                                 |       datapath_inst/thereg_file/registers_reg_7__8_
+                                                 |       datapath_inst/thereg_file/registers_reg_7__7_
+                                                 |       datapath_inst/thereg_file/registers_reg_7__6_
+                                                 |       datapath_inst/thereg_file/registers_reg_7__5_
+                                                 |       datapath_inst/thereg_file/registers_reg_7__4_
+                                                 |       datapath_inst/thereg_file/registers_reg_7__3_
+                                                 |       datapath_inst/thereg_file/registers_reg_7__2_
+                                                 |       datapath_inst/thereg_file/registers_reg_7__1_
+                                                 |       datapath_inst/thereg_file/registers_reg_7__0_
+                                                 |
+ datapath_inst/thereg_file/clk_gate_registers_reg_6__0_
+                                                 |       datapath_inst/thereg_file/registers_reg_6__15_
+                                                 |       datapath_inst/thereg_file/registers_reg_6__14_
+                                                 |       datapath_inst/thereg_file/registers_reg_6__13_
+                                                 |       datapath_inst/thereg_file/registers_reg_6__12_
+                                                 |       datapath_inst/thereg_file/registers_reg_6__11_
+                                                 |       datapath_inst/thereg_file/registers_reg_6__10_
+                                                 |       datapath_inst/thereg_file/registers_reg_6__9_
+                                                 |       datapath_inst/thereg_file/registers_reg_6__8_
+                                                 |       datapath_inst/thereg_file/registers_reg_6__7_
+                                                 |       datapath_inst/thereg_file/registers_reg_6__6_
+                                                 |       datapath_inst/thereg_file/registers_reg_6__5_
+                                                 |       datapath_inst/thereg_file/registers_reg_6__4_
+                                                 |       datapath_inst/thereg_file/registers_reg_6__3_
+                                                 |       datapath_inst/thereg_file/registers_reg_6__2_
+                                                 |       datapath_inst/thereg_file/registers_reg_6__1_
+                                                 |       datapath_inst/thereg_file/registers_reg_6__0_
+                                                 |
+ datapath_inst/thereg_file/clk_gate_registers_reg_5__0_
+                                                 |       datapath_inst/thereg_file/registers_reg_5__15_
+                                                 |       datapath_inst/thereg_file/registers_reg_5__14_
+                                                 |       datapath_inst/thereg_file/registers_reg_5__13_
+                                                 |       datapath_inst/thereg_file/registers_reg_5__12_
+                                                 |       datapath_inst/thereg_file/registers_reg_5__11_
+                                                 |       datapath_inst/thereg_file/registers_reg_5__10_
+                                                 |       datapath_inst/thereg_file/registers_reg_5__9_
+                                                 |       datapath_inst/thereg_file/registers_reg_5__8_
+                                                 |       datapath_inst/thereg_file/registers_reg_5__7_
+                                                 |       datapath_inst/thereg_file/registers_reg_5__6_
+                                                 |       datapath_inst/thereg_file/registers_reg_5__5_
+                                                 |       datapath_inst/thereg_file/registers_reg_5__4_
+                                                 |       datapath_inst/thereg_file/registers_reg_5__3_
+                                                 |       datapath_inst/thereg_file/registers_reg_5__2_
+                                                 |       datapath_inst/thereg_file/registers_reg_5__1_
+                                                 |       datapath_inst/thereg_file/registers_reg_5__0_
+                                                 |
+ datapath_inst/thereg_file/clk_gate_registers_reg_4__0_
+                                                 |       datapath_inst/thereg_file/registers_reg_4__15_
+                                                 |       datapath_inst/thereg_file/registers_reg_4__14_
+                                                 |       datapath_inst/thereg_file/registers_reg_4__13_
+                                                 |       datapath_inst/thereg_file/registers_reg_4__12_
+                                                 |       datapath_inst/thereg_file/registers_reg_4__11_
+                                                 |       datapath_inst/thereg_file/registers_reg_4__10_
+                                                 |       datapath_inst/thereg_file/registers_reg_4__9_
+                                                 |       datapath_inst/thereg_file/registers_reg_4__8_
+                                                 |       datapath_inst/thereg_file/registers_reg_4__7_
+                                                 |       datapath_inst/thereg_file/registers_reg_4__6_
+                                                 |       datapath_inst/thereg_file/registers_reg_4__5_
+                                                 |       datapath_inst/thereg_file/registers_reg_4__4_
+                                                 |       datapath_inst/thereg_file/registers_reg_4__3_
+                                                 |       datapath_inst/thereg_file/registers_reg_4__2_
+                                                 |       datapath_inst/thereg_file/registers_reg_4__1_
+                                                 |       datapath_inst/thereg_file/registers_reg_4__0_
+                                                 |
+ datapath_inst/thereg_file/clk_gate_registers_reg_3__0_
+                                                 |       datapath_inst/thereg_file/registers_reg_3__15_
+                                                 |       datapath_inst/thereg_file/registers_reg_3__14_
+                                                 |       datapath_inst/thereg_file/registers_reg_3__13_
+                                                 |       datapath_inst/thereg_file/registers_reg_3__12_
+                                                 |       datapath_inst/thereg_file/registers_reg_3__11_
+                                                 |       datapath_inst/thereg_file/registers_reg_3__10_
+                                                 |       datapath_inst/thereg_file/registers_reg_3__9_
+                                                 |       datapath_inst/thereg_file/registers_reg_3__8_
+                                                 |       datapath_inst/thereg_file/registers_reg_3__7_
+                                                 |       datapath_inst/thereg_file/registers_reg_3__6_
+                                                 |       datapath_inst/thereg_file/registers_reg_3__5_
+                                                 |       datapath_inst/thereg_file/registers_reg_3__4_
+                                                 |       datapath_inst/thereg_file/registers_reg_3__3_
+                                                 |       datapath_inst/thereg_file/registers_reg_3__2_
+                                                 |       datapath_inst/thereg_file/registers_reg_3__1_
+                                                 |       datapath_inst/thereg_file/registers_reg_3__0_
+                                                 |
+ datapath_inst/thereg_file/clk_gate_registers_reg_2__0_
+                                                 |       datapath_inst/thereg_file/registers_reg_2__15_
+                                                 |       datapath_inst/thereg_file/registers_reg_2__14_
+                                                 |       datapath_inst/thereg_file/registers_reg_2__13_
+                                                 |       datapath_inst/thereg_file/registers_reg_2__12_
+                                                 |       datapath_inst/thereg_file/registers_reg_2__11_
+                                                 |       datapath_inst/thereg_file/registers_reg_2__10_
+                                                 |       datapath_inst/thereg_file/registers_reg_2__9_
+                                                 |       datapath_inst/thereg_file/registers_reg_2__8_
+                                                 |       datapath_inst/thereg_file/registers_reg_2__7_
+                                                 |       datapath_inst/thereg_file/registers_reg_2__6_
+                                                 |       datapath_inst/thereg_file/registers_reg_2__5_
+                                                 |       datapath_inst/thereg_file/registers_reg_2__4_
+                                                 |       datapath_inst/thereg_file/registers_reg_2__3_
+                                                 |       datapath_inst/thereg_file/registers_reg_2__2_
+                                                 |       datapath_inst/thereg_file/registers_reg_2__1_
+                                                 |       datapath_inst/thereg_file/registers_reg_2__0_
+                                                 |
+ datapath_inst/thereg_file/clk_gate_registers_reg_1__0_
+                                                 |       datapath_inst/thereg_file/registers_reg_1__15_
+                                                 |       datapath_inst/thereg_file/registers_reg_1__14_
+                                                 |       datapath_inst/thereg_file/registers_reg_1__13_
+                                                 |       datapath_inst/thereg_file/registers_reg_1__12_
+                                                 |       datapath_inst/thereg_file/registers_reg_1__11_
+                                                 |       datapath_inst/thereg_file/registers_reg_1__10_
+                                                 |       datapath_inst/thereg_file/registers_reg_1__9_
+                                                 |       datapath_inst/thereg_file/registers_reg_1__8_
+                                                 |       datapath_inst/thereg_file/registers_reg_1__7_
+                                                 |       datapath_inst/thereg_file/registers_reg_1__6_
+                                                 |       datapath_inst/thereg_file/registers_reg_1__5_
+                                                 |       datapath_inst/thereg_file/registers_reg_1__4_
+                                                 |       datapath_inst/thereg_file/registers_reg_1__3_
+                                                 |       datapath_inst/thereg_file/registers_reg_1__2_
+                                                 |       datapath_inst/thereg_file/registers_reg_1__1_
+                                                 |       datapath_inst/thereg_file/registers_reg_1__0_
+                                                 |
+ datapath_inst/thereg_file/clk_gate_registers_reg_0__0_
+                                                 |       datapath_inst/thereg_file/registers_reg_0__15_
+                                                 |       datapath_inst/thereg_file/registers_reg_0__14_
+                                                 |       datapath_inst/thereg_file/registers_reg_0__13_
+                                                 |       datapath_inst/thereg_file/registers_reg_0__12_
+                                                 |       datapath_inst/thereg_file/registers_reg_0__11_
+                                                 |       datapath_inst/thereg_file/registers_reg_0__10_
+                                                 |       datapath_inst/thereg_file/registers_reg_0__9_
+                                                 |       datapath_inst/thereg_file/registers_reg_0__8_
+                                                 |       datapath_inst/thereg_file/registers_reg_0__7_
+                                                 |       datapath_inst/thereg_file/registers_reg_0__6_
+                                                 |       datapath_inst/thereg_file/registers_reg_0__5_
+                                                 |       datapath_inst/thereg_file/registers_reg_0__4_
+                                                 |       datapath_inst/thereg_file/registers_reg_0__3_
+                                                 |       datapath_inst/thereg_file/registers_reg_0__2_
+                                                 |       datapath_inst/thereg_file/registers_reg_0__1_
+                                                 |       datapath_inst/thereg_file/registers_reg_0__0_
+                                                 |
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+                             Ungated Register Report
+--------------------------------------------------------------------------------
+            Ungated Register           | enable  | ctrl    | width   | removed
+--------------------------------------------------------------------------------
+    datapath_inst/RegTmpB_reg_0_       |  -      |  -      |  -      |  -
+    datapath_inst/RegTmpB_reg_1_       |  -      |  -      |  -      |  -
+    datapath_inst/RegTmpB_reg_2_       |  -      |  -      |  -      |  -
+    datapath_inst/RegTmpB_reg_3_       |  -      |  -      |  -      |  -
+    datapath_inst/RegTmpB_reg_4_       |  -      |  -      |  -      |  -
+    datapath_inst/RegTmpB_reg_5_       |  -      |  -      |  -      |  -
+    datapath_inst/RegTmpB_reg_6_       |  -      |  -      |  -      |  -
+    datapath_inst/RegTmpB_reg_7_       |  -      |  -      |  -      |  -
+    datapath_inst/RegTmpB_reg_8_       |  -      |  -      |  -      |  -
+    datapath_inst/RegTmpB_reg_9_       |  -      |  -      |  -      |  -
+    datapath_inst/RegTmpB_reg_10_      |  -      |  -      |  -      |  -
+    datapath_inst/RegTmpB_reg_11_      |  -      |  -      |  -      |  -
+    datapath_inst/RegTmpB_reg_12_      |  -      |  -      |  -      |  -
+    datapath_inst/RegTmpB_reg_13_      |  -      |  -      |  -      |  -
+    datapath_inst/RegTmpB_reg_14_      |  -      |  -      |  -      |  -
+    datapath_inst/RegTmpB_reg_15_      |  -      |  -      |  -      |  -
+    datapath_inst/RegTmpA_reg_0_       |  -      |  -      |  -      |  -
+    datapath_inst/RegTmpA_reg_1_       |  -      |  -      |  -      |  -
+    datapath_inst/RegTmpA_reg_2_       |  -      |  -      |  -      |  -
+    datapath_inst/RegTmpA_reg_3_       |  -      |  -      |  -      |  -
+    datapath_inst/RegTmpA_reg_4_       |  -      |  -      |  -      |  -
+    datapath_inst/RegTmpA_reg_5_       |  -      |  -      |  -      |  -
+    datapath_inst/RegTmpA_reg_6_       |  -      |  -      |  -      |  -
+    datapath_inst/RegTmpA_reg_7_       |  -      |  -      |  -      |  -
+    datapath_inst/RegTmpA_reg_8_       |  -      |  -      |  -      |  -
+    datapath_inst/RegTmpA_reg_9_       |  -      |  -      |  -      |  -
+    datapath_inst/RegTmpA_reg_10_      |  -      |  -      |  -      |  -
+    datapath_inst/RegTmpA_reg_11_      |  -      |  -      |  -      |  -
+    datapath_inst/RegTmpA_reg_12_      |  -      |  -      |  -      |  -
+    datapath_inst/RegTmpA_reg_13_      |  -      |  -      |  -      |  -
+    datapath_inst/RegTmpA_reg_14_      |  -      |  -      |  -      |  -
+    datapath_inst/RegTmpA_reg_15_      |  -      |  -      |  -      |  -
+    datapath_inst/RegBIdx_reg_3_       |  -      |  -      |  -      |  -
+    datapath_inst/RegAIdx_reg_3_       |  -      |  -      |  -      |  -
+    datapath_inst/RegAIdx_reg_1_       |  -      |  -      |  -      |  -
+    datapath_inst/RegAIdx_reg_0_       |  -      |  -      |  -      |  -
+    datapath_inst/RegOpcode_reg_4_     |  -      |  -      |  -      |  -
+    datapath_inst/RegOpcode_reg_2_     |  -      |  -      |  -      |  -
+    datapath_inst/RegOpcode_reg_3_     |  -      |  -      |  -      |  -
+    datapath_inst/RegBIdx_reg_1_       |  -      |  -      |  -      |  -
+    datapath_inst/RegBIdx_reg_0_       |  -      |  -      |  -      |  -
+    datapath_inst/RegBIdx_reg_2_       |  -      |  -      |  -      |  -
+    datapath_inst/RegOpcode_reg_5_     |  -      |  -      |  -      |  -
+    datapath_inst/RegOpcode_reg_1_     |  -      |  -      |  -      |  -
+    datapath_inst/RegOpcode_reg_0_     |  -      |  -      |  -      |  -
+    datapath_inst/RegAIdx_reg_2_       |  -      |  -      |  -      |  -
+    control_inst/Cycle_reg_0_          |  -      |  -      |  -      |  -
+    control_inst/IllegalInst_reg       |  -      |  -      |  -      |  -
+    control_inst/Cycle_reg_2_          |  -      |  -      |  -      |  -
+    control_inst/Cycle_reg_1_          |  -      |  -      |  -      |  -
+    control_inst/mem_rd_stb_o_reg      |  -      |  -      |  -      |  -
+    control_inst/mem_wr_stb_o_reg      |  -      |  -      |  -      |  -
+    control_inst/cpu_halt_o_reg        |  -      |  -      |  -      |  -
+    control_inst/Zero_reg              |  -      |  -      |  -      |  -
+    control_inst/Carry_reg             |  -      |  -      |  -      |  -
+                                       |         |         |         |
+--------------------------------------------------------------------------------
+  
+
+                             Clock Gating Summary
+          ------------------------------------------------------------
+          |    Number of Clock gating elements    |        9         |
+          |                                       |                  |
+          |    Number of Gated registers          |     144 (72.36%) |
+          |                                       |                  |
+          |    Number of Ungated registers        |     55 (27.64%)  |
+          |                                       |                  |
+          |    Total number of registers          |        199       |
+          ------------------------------------------------------------
+  
+
+1

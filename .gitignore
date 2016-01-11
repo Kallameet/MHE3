@@ -12,3 +12,5 @@ transcript
 *.vhd.bak
 db
 incremental_db
+*.bbl
+*.blg

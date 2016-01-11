@@ -1,0 +1,42 @@
+equ prog_start, 0000h ; start address of program rom
+equ data_start, 8000h ; start address of data ram
+equ mem_dump_addr, 0ffffh
+
+macro write_mem_dump
+  loadi r6, mem_dump_addr
+  store r4, r6 ; dump memory to file
+endm
+
+org data_start
+x : db 255
+
+org prog_start
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+loadi r1, x
+
+;; stop simulation
+done:
+loadi r4, data_start
+write_mem_dump
+sleep

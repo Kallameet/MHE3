@@ -1,0 +1,50 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : cpu
+Version: B-2008.09-SP3
+Date   : Mon Jan 11 12:51:31 2016
+****************************************
+
+Operating Conditions: WORST   Library: c35_CORELIB
+Wire Load Model Mode: enclosed
+
+  Startpoint: datapath_inst/RegOpcode_reg_1_
+              (rising edge-triggered flip-flop)
+  Endpoint: mem_addr_o[15]
+            (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  datapath           10k                   c35_CORELIB
+  cpu                10k                   c35_CORELIB
+  control            10k                   c35_CORELIB
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  datapath_inst/RegOpcode_reg_1_/C (DFC3)                 0.00       0.00 r
+  datapath_inst/RegOpcode_reg_1_/Q (DFC3)                 1.43       1.43 f
+  datapath_inst/op_code_o[1] (datapath)                   0.00       1.43 f
+  control_inst/op_code_i[1] (control)                     0.00       1.43 f
+  control_inst/U82/Q (CLKIN0)                             1.16       2.59 r
+  control_inst/U59/Q (NOR20)                              1.14       3.73 f
+  control_inst/U58/Q (NAND30)                             1.93       5.66 r
+  control_inst/U12/Q (NOR22)                              1.74       7.40 f
+  control_inst/U51/Q (CLKIN0)                             1.62       9.02 r
+  control_inst/U11/Q (OAI222)                             1.23      10.25 f
+  control_inst/sel_addr_o (control)                       0.00      10.25 f
+  datapath_inst/sel_addr_i (datapath)                     0.00      10.25 f
+  datapath_inst/U21/Q (IMUX20)                            1.10      11.35 f
+  datapath_inst/mem_addr_o[15] (datapath)                 0.00      11.35 f
+  mem_addr_o[15] (out)                                    0.00      11.35 f
+  data arrival time                                                 11.35
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+1
