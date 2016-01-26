@@ -1,0 +1,10 @@
+./power_RtlSer_IF_CONST.txt:Multipliers                           2.93e-03 2.33e-03 2.80e-07  5.25e-03 100.0
+./power_RtlSer_IF_RAND1.txt:Multipliers                           6.67e-03 7.54e-03 2.80e-07  1.42e-02 100.0
+./power_RtlSer_IF_RAND2.txt:Multipliers                           3.86e-03 4.95e-03 2.80e-07  8.81e-03 100.0
+./power_RtlPar_IF_CONST.txt:Multipliers                           2.75e-04 9.87e-04 4.31e-07  1.26e-03 100.0
+./power_RtlSer_IF_SINE.txt:Multipliers                           3.44e-03 4.54e-03 2.80e-07  7.97e-03 100.0
+./power_RtlPar_IF_RAND2.txt:Multipliers                           5.87e-03 6.73e-03 4.31e-07  1.26e-02 100.0
+./power_RtlPar_IF_SINE.txt:Multipliers                           5.08e-03 6.00e-03 4.31e-07  1.11e-02 100.0
+./power_RtlPar_IF_RAND1.txt:Multipliers                           5.87e-03 6.73e-03 4.31e-07  1.26e-02 100.0
+
+grep -r "100.0" .

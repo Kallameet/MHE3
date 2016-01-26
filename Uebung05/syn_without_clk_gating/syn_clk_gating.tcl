@@ -23,7 +23,7 @@ elaborate $design
 set_operating_conditions -library c35_CORELIB WORST
 
 #clock gating style
-set_clock_gating_style -sequential_cell latch -positive_edge_logic {and} -negative_edge_logic {or
+set_clock_gating_style -sequential_cell latch -positive_edge_logic {and} -negative_edge_logic {or}
 
 # compile
 echo "Compile..."

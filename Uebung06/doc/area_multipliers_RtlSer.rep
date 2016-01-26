@@ -1,0 +1,25 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : area
+Design : Multipliers
+Version: B-2008.09-SP3
+Date   : Wed Jan 13 09:31:27 2016
+****************************************
+
+Library(s) Used:
+
+    c35_CORELIB (File: /eda/ams/synopsys/c35_3.3V/c35_CORELIB.db)
+
+Number of ports:              260
+Number of nets:              1190
+Number of cells:              994
+Number of references:           9
+
+Combinational area:       315788.199982
+Noncombinational area:    90672.399597
+Net Interconnect area:    65736.000000 
+
+Total cell area:          406460.599579
+Total area:               472196.599579
+1

@@ -1,0 +1,44 @@
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : Multipliers
+Version: B-2008.09-SP3
+Date   : Wed Jan 13 09:30:34 2016
+****************************************
+
+
+Library(s) Used:
+
+    c35_CORELIB (File: /eda/ams/synopsys/c35_3.3V/c35_CORELIB.db)
+
+
+Operating Conditions: WORST   Library: c35_CORELIB
+Wire Load Model Mode: enclosed
+
+Design        Wire Load Model            Library
+------------------------------------------------
+Multipliers            10k               c35_CORELIB
+Multipliers_DW_mult_tc_0
+                       10k               c35_CORELIB
+Multipliers_DW_mult_tc_1
+                       10k               c35_CORELIB
+
+
+Global Operating Voltage = 3    
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+  Cell Internal Power  =   3.3370 mW   (63%)
+  Net Switching Power  =   1.9813 mW   (37%)
+                         ---------
+Total Dynamic Power    =   5.3183 mW  (100%)
+
+Cell Leakage Power     = 431.4826 nW
+
+1

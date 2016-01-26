@@ -1,0 +1,134 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : Multipliers
+Version: B-2008.09-SP3
+Date   : Wed Jan 13 09:31:27 2016
+****************************************
+
+Operating Conditions: WORST   Library: c35_CORELIB
+Wire Load Model Mode: enclosed
+
+  Startpoint: R_reg_XA__3_
+              (rising edge-triggered flip-flop clocked by iClk)
+  Endpoint: R_reg_X__62_
+            (rising edge-triggered flip-flop clocked by iClk)
+  Path Group: iClk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  Multipliers        10k                   c35_CORELIB
+  Multipliers_DW_mult_tc_0
+                     10k                   c35_CORELIB
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock iClk (rise edge)                                  0.00       0.00
+  clock network delay (ideal)                             1.00       1.00
+  R_reg_XA__3_/C (DFC3)                                   0.00       1.00 r
+  R_reg_XA__3_/Q (DFC3)                                   1.19       2.19 f
+  mult_68/a[3] (Multipliers_DW_mult_tc_0)                 0.00       2.19 f
+  mult_68/U1917/Q (CLKIN8)                                0.37       2.56 r
+  mult_68/U1939/Q (XNR21)                                 0.82       3.38 f
+  mult_68/U2030/Q (CLKIN6)                                0.28       3.66 r
+  mult_68/U2025/Q (CLKBU6)                                0.79       4.46 r
+  mult_68/U2368/Q (NOR22)                                 0.41       4.87 f
+  mult_68/U772/CO (ADD32)                                 0.74       5.60 f
+  mult_68/U770/S (ADD32)                                  0.81       6.41 f
+  mult_68/U298/CO (ADD32)                                 0.67       7.09 f
+  mult_68/U297/CO (ADD32)                                 0.68       7.76 f
+  mult_68/U1974/Q (NAND22)                                0.31       8.08 r
+  mult_68/U1914/Q (NAND33)                                0.20       8.27 f
+  mult_68/U2171/Q (NAND24)                                0.26       8.53 r
+  mult_68/U1937/Q (NAND34)                                0.16       8.69 f
+  mult_68/U2182/Q (NAND24)                                0.25       8.95 r
+  mult_68/U1938/Q (NAND34)                                0.16       9.11 f
+  mult_68/U2193/Q (NAND24)                                0.24       9.35 r
+  mult_68/U1941/Q (NAND33)                                0.13       9.48 f
+  mult_68/U292/CO (ADD32)                                 0.62      10.11 f
+  mult_68/U291/CO (ADD32)                                 0.64      10.74 f
+  mult_68/U290/CO (ADD32)                                 0.64      11.38 f
+  mult_68/U289/CO (ADD32)                                 0.64      12.02 f
+  mult_68/U288/CO (ADD32)                                 0.64      12.66 f
+  mult_68/U287/CO (ADD32)                                 0.64      13.29 f
+  mult_68/U286/CO (ADD32)                                 0.64      13.93 f
+  mult_68/U285/CO (ADD32)                                 0.64      14.57 f
+  mult_68/U284/CO (ADD32)                                 0.64      15.20 f
+  mult_68/U283/CO (ADD32)                                 0.68      15.88 f
+  mult_68/U1996/Q (NAND22)                                0.32      16.20 r
+  mult_68/U1979/Q (NAND33)                                0.15      16.36 f
+  mult_68/U1999/Q (NAND22)                                0.28      16.64 r
+  mult_68/U1954/Q (NAND32)                                0.19      16.83 f
+  mult_68/U2014/Q (NAND22)                                0.32      17.15 r
+  mult_68/U2007/Q (NAND33)                                0.13      17.28 f
+  mult_68/U279/CO (ADD32)                                 0.62      17.91 f
+  mult_68/U278/CO (ADD32)                                 0.64      18.54 f
+  mult_68/U277/CO (ADD32)                                 0.64      19.18 f
+  mult_68/U276/CO (ADD32)                                 0.64      19.82 f
+  mult_68/U275/CO (ADD32)                                 0.64      20.45 f
+  mult_68/U274/CO (ADD32)                                 0.64      21.09 f
+  mult_68/U273/CO (ADD32)                                 0.68      21.77 f
+  mult_68/U1987/Q (NAND22)                                0.32      22.09 r
+  mult_68/U1977/Q (NAND33)                                0.15      22.25 f
+  mult_68/U2002/Q (NAND22)                                0.28      22.53 r
+  mult_68/U1955/Q (NAND32)                                0.19      22.72 f
+  mult_68/U2015/Q (NAND22)                                0.32      23.04 r
+  mult_68/U2010/Q (NAND33)                                0.13      23.17 f
+  mult_68/U269/CO (ADD32)                                 0.62      23.79 f
+  mult_68/U268/CO (ADD32)                                 0.64      24.43 f
+  mult_68/U267/CO (ADD32)                                 0.64      25.07 f
+  mult_68/U266/CO (ADD32)                                 0.64      25.71 f
+  mult_68/U265/CO (ADD32)                                 0.64      26.34 f
+  mult_68/U264/CO (ADD32)                                 0.64      26.98 f
+  mult_68/U263/CO (ADD32)                                 0.68      27.66 f
+  mult_68/U1990/Q (NAND22)                                0.32      27.98 r
+  mult_68/U1978/Q (NAND33)                                0.15      28.13 f
+  mult_68/U1994/Q (NAND22)                                0.29      28.42 r
+  mult_68/U1915/Q (NAND33)                                0.20      28.62 f
+  mult_68/U1972/Q (NAND24)                                0.25      28.87 r
+  mult_68/U1981/Q (NAND33)                                0.13      29.00 f
+  mult_68/U259/CO (ADD32)                                 0.62      29.62 f
+  mult_68/U258/CO (ADD32)                                 0.64      30.26 f
+  mult_68/U257/CO (ADD32)                                 0.64      30.90 f
+  mult_68/U256/CO (ADD32)                                 0.64      31.53 f
+  mult_68/U255/CO (ADD32)                                 0.64      32.17 f
+  mult_68/U254/CO (ADD32)                                 0.64      32.81 f
+  mult_68/U253/CO (ADD32)                                 0.68      33.49 f
+  mult_68/U2005/Q (NAND22)                                0.32      33.81 r
+  mult_68/U1980/Q (NAND33)                                0.15      33.96 f
+  mult_68/U2018/Q (NAND22)                                0.29      34.25 r
+  mult_68/U1916/Q (NAND33)                                0.20      34.45 f
+  mult_68/U1945/Q (NAND24)                                0.25      34.69 r
+  mult_68/U2019/Q (NAND33)                                0.13      34.83 f
+  mult_68/U249/CO (ADD32)                                 0.62      35.45 f
+  mult_68/U248/CO (ADD32)                                 0.64      36.09 f
+  mult_68/U247/CO (ADD32)                                 0.64      36.73 f
+  mult_68/U246/CO (ADD32)                                 0.64      37.36 f
+  mult_68/U245/CO (ADD32)                                 0.64      38.00 f
+  mult_68/U244/CO (ADD32)                                 0.64      38.64 f
+  mult_68/U243/CO (ADD32)                                 0.68      39.31 f
+  mult_68/U2195/Q (NAND22)                                0.30      39.61 r
+  mult_68/U1918/Q (NAND32)                                0.22      39.83 f
+  mult_68/U1943/Q (XOR21)                                 0.68      40.51 f
+  mult_68/product[62] (Multipliers_DW_mult_tc_0)          0.00      40.51 f
+  R_reg_X__62_/D (DFEC3)                                  0.00      40.51 f
+  data arrival time                                                 40.51
+
+  clock iClk (rise edge)                                 40.00      40.00
+  clock network delay (ideal)                             1.00      41.00
+  clock uncertainty                                      -0.20      40.80
+  R_reg_X__62_/C (DFEC3)                                  0.00      40.80 r
+  library setup time                                     -0.27      40.53
+  data required time                                                40.53
+  --------------------------------------------------------------------------
+  data required time                                                40.53
+  data arrival time                                                -40.51
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.02
+
+
+1
