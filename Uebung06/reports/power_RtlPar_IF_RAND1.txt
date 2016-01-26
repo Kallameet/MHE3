@@ -1,0 +1,28 @@
+****************************************
+Report : Time Based Power
+	-hierarchy
+Design : Multipliers
+Version: C-2009.06-SP3
+Date   : Wed Jan 13 09:45:35 2016
+****************************************
+
+
+
+                                      Switch   Int      Leak      Total
+Hierarchy                             Power    Power    Power     Power    %
+--------------------------------------------------------------------------------
+Multipliers                           5.87e-03 6.73e-03 4.31e-07  1.26e-02 100.0
+  mult_67 (Multipliers_DW_mult_tc_0)  2.70e-03 2.40e-03 1.44e-07  5.10e-03  40.5
+  mult_66 (Multipliers_DW_mult_tc_1)  2.67e-03 2.36e-03 1.43e-07  5.03e-03  39.9
+
+
+                                      Peak     Peak            Glitch   X-tran
+Hierarchy                             Power    Time            Power    Power
+--------------------------------------------------------------------------------
+Multipliers                              0.494 555723.112-555723.113
+                                                               9.71e-05    0.000
+  mult_67 (Multipliers_DW_mult_tc_0)     0.260 206283.099-206283.100
+                                                               5.22e-05    0.000
+  mult_66 (Multipliers_DW_mult_tc_1)     0.249 462123.038-462123.039
+                                                               4.46e-05    0.000
+1
